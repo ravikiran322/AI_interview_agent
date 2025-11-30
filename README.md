@@ -99,3 +99,5 @@ If you want voice mode that uses the Whisper API, ensure your OpenAI account sup
 
 - The app uses the OpenAI API for both follow-up generation and evaluation. Ensure you have sufficient quota.
 - If the LLM call fails, the app uses a lightweight heuristic fallback for basic scoring.
+  
+LIVE WORKING LINK:https://aiinterviewagent-s4zsedbwxvf8zyazdac5ux.streamlit.app/
