@@ -1,0 +1,17 @@
+```mermaid
+flowchart TD
+    User[User (Streamlit UI)] -->|Start Interview| App[app.py]
+    App --> Interviewer[interviewer.py]
+    Interviewer -->|Get question| Prompts[prompts.py]
+    Interviewer -->|Call LLM for follow-up| OpenAI[OpenAI API]
+    App --> Adaptive[adaptive.py]
+    App --> Scoring[scoring.py]
+    App --> Voice[voice.py]
+    Interviewer -->|Send answer for eval| Evaluator[evaluator.py]
+    Evaluator -->|Call LLM for scoring| OpenAI
+    Evaluator -->|Return evaluation| Interviewer
+    Interviewer -->|Update history| App
+    App -->|Show report| User
+    App --> DB[db.py]
+    App --> Reporter[reporter.py]
+```
